@@ -4,8 +4,8 @@
 
 [user]
 	;Replace your own name and email address
-	name = Josenivaldo Benito Jr.
-	email = jrbenito@benito.qsl.br
+	name = Alex Borro
+	email = alexborro@gmail.com
 
 [color]
     diff = auto
@@ -27,9 +27,9 @@
     new = green bold
 
 [color "status"]
-    added = yellow
-    changed = green
-    untracked = cyan
+	added = green
+	changed = yellow
+	untracked = red
 
 [alias]
     ci = commit
@@ -47,7 +47,7 @@
 [core]
     excludesfile = ~/Dropbox/code/dotfiles/git/gitignore
     attributesfile = ~/Dropbox/code/dotfiles/git/git_attributes_file
-    editor = vim
+	editor = gedit
 
 [url "git://github.com/"]
 	insteadOf = "gh://"
@@ -64,3 +64,5 @@
 
 [help]
 	autocorrect = 1
+[mergetool]
+	tool = kdiff3
