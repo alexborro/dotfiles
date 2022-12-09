@@ -105,7 +105,7 @@ PS1_POST="\\\$ "
 
 if [ "$GIT_PROMPT" == "Y" ]; then
     # Configure prompt
-    PROMPT_COMMAND='__git_ps1 "$PS1_PRE" "$PS1_POST"'
+    PROMPT_COMMAND='__git_ps1 "$PS1_PRE" "$PS1_POST";history -a;history -c;history -r'
 else
     PS1="${PS1_PRE}${PS1_POST} "
 fi
