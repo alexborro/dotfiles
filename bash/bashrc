@@ -80,9 +80,9 @@ fi
 if [[ $USER == sudar* ]]  # you might have to customize the username in your case
 then
     #The lowercase w is the full current working directory and W is last part of current directory
-    PS1_PRE="${HOST_COLOR}\h${WHITE}:${RED}\w${COLOR_NONE}"
+    PS1_PRE="${HOST_COLOR}\h${WHITE}:${YELLOW}\w${COLOR_NONE}"
 else
-    PS1_PRE="${GREEN}\u${WHITE}@${HOST_COLOR}\h${WHITE}:${RED}\w${COLOR_NONE}"
+    PS1_PRE="${GREEN}\u${WHITE}@${HOST_COLOR}\h${WHITE}:${YELLOW}\w${COLOR_NONE}"
 fi
 
 if [ -f $additional_files/git/git-contrib/completion/git-prompt.sh ]; then
@@ -123,4 +123,10 @@ esac
 echo $PATH |grep "$HOME/bin" 2> /dev/null > /dev/null
 if [ ! $? -eq 0 ]; then
    export PATH=$PATH:$HOME/bin:$HOME/.local/bin
+fi
+
+# export path for user/.local/bin directory
+echo $PATH |grep "$HOME/.local/bin" 2> /dev/null > /dev/null
+if [ ! $? -eq 0 ]; then
+   export PATH=$PATH:$HOME/.local/bin
 fi
