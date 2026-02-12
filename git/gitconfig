@@ -3,9 +3,10 @@
 #
 
 [user]
-	;Replace your own name and email address
-	name = Alex Borro
-	email = alexborro@gmail.com
+    ;Replace your own name and email address
+    name = Alex Borro
+    email = alexborro@gmail.com
+    signingkey = 02F0B106F626359A
 
 [color]
     diff = auto
@@ -65,8 +66,23 @@
 [help]
 	autocorrect = 1
 [mergetool]
-	tool = kdiff3
+	tool = bc3
 [credential]
 	helper = cache --timeout=3600
 [merge]
-	tool = kdiff3
+	tool = bc3
+[commit]
+    gpgsign = true
+	template = /home/alex/git/git-commit-template
+[fetch]
+	recurseSubmodules = on-demand
+[submodule]
+   recurse = true
+[status]
+    submoduleSummary = true
+[safe]
+	directory = /esphome
+	directory = *
+	
+[push]
+	recurseSubmodules = check
